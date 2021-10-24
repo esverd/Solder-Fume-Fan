@@ -11,7 +11,7 @@ void setup()
 void loop() 
 {
   int potVal = analogRead(pinPotmeter);
-  int PWMVal = map(potVal, 0, 1023, 0, 255);
+  int PWMVal = map(potVal, 0, 1023, 255, 0);
   analogWrite(pinMotor, PWMVal);
   delay(50);
 }
